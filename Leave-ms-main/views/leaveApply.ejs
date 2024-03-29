@@ -1,0 +1,55 @@
+<% include ./partial/header %> <% include ./partial/studfunction %>
+
+<div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+max-width: 50%;
+margin-left: 431px;
+margin-top: -300px;  text-align: -webkit-center; font-style:arial;
+"
+>
+  <h1>APPLY FOR LEAVE</h1>
+  <form action="/student/<%=student._id%>/apply" method="POST">
+    <div class="form-group">
+      <select name="leave[subject]" class="form-control">
+        <option value="" selected disabled>Choose Leave Type</option>
+        <option value="annual">Annual Leave</option>
+        <option value="sick">Sick Leave</option>
+        <option value="parental">Maternity | Paternity Leave</option>
+        <option value="unpaid">Unpaid Leave</option>
+        <option value="bereavement">Bereavement Leave</option>
+        <option value="special">Special Leave</option>
+        <option value="compensatory">Compensatory Leave</option>
+        <option value="study">Study Leave</option>
+        <option value="public-holiday">Public Holiday</option>
+        <option value="casual">Casual Leave</option>
+        <option value="half-day">Half-Day Leave</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="from">FROM DATE:</label>
+      <input
+        type="date"
+        data-date-inline-picker="true"
+        id="from"
+        name="leave[from]"
+      />
+    </div>
+    <div class="form-group">
+      <label for="to">TO DATE:</label>
+      <input
+        type="date"
+        data-date-inline-picker="true"
+        id="to"
+        name="leave[to]"
+      />
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-lg btn-block btn-default"><strong>SUBMIT</strong></button>
+    </div>
+  </form>
+
+  <% include ./partial/footer %>
+</div>

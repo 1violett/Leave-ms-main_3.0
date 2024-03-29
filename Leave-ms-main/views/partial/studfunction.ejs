@@ -1,0 +1,67 @@
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<h1 style="margin-top: 61px; font-size: 30px; margin-left: 60px;">Welcome, <%=student.name%></h1>
+<div class="container">
+  <div
+    class="row"
+    style="   margin-left: -100px;
+  margin-right: 899px; 
+  font-style:arial;
+  margin-top: 110px;
+  "
+  
+  
+  >
+    <div class="col-sm-3" style="list-style-type: none; button-color:  #4caf50;">
+      <li>
+        <a
+          href="/student/home"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px; background-color: #4caf50"
+          >HOME</a
+        >
+      </li>
+      <li>
+        <a
+          href="/student/<%=student._id%>"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px; background-color: #4caf50"
+          >PROFILE</a
+        >
+      </li>
+      <li>
+        <a
+          href="/student/<%=student._id%>/apply"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px; background-color: #4caf50"
+          >LEAVE APPLY</a
+        >
+      </li>
+      <li>
+        <a
+          href="/student/<%=student._id%>/track"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px; background-color: #4caf50"
+          >LEAVE TRACK</a
+        >
+      </li>
+      <!-- <li>
+        <a
+          href="/student/<%=student._id%>/types"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px; background-color:  #4caf50;"
+          >LEAVE TYPES</a
+        >
+      </li> -->
+    </div>
+  </div>
+</div>
